@@ -20,6 +20,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     # this route will map us to the url file in the blog directory and give us the content set in that route
-    path('blog/', include('blog.urls'))
+    path('', include('blog.urls')),
+
+
+
 
 ]
