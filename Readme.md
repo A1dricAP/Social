@@ -13,3 +13,29 @@ The `urls.py` file, basically is used to map the urls to the corresponding funct
 There exists a `templates` folder within the `blog` folder; responsible for mapping out the results to be displayed to the user, via the `urls.py`.
 
 ---
+
+instead of hardcoding the url path in the html tags,
+
+```
+href="/"
+
+href="about/"
+```
+
+we can use url patterns; by declaring the name of the path in the tags. shown below.
+
+```
+href="{% url 'blog-home'%}"
+
+href="{% url 'blog-about'%}"
+```
+
+> 'blog-home'
+
+> 'blog-about'
+
+are defined in `urls.py`
+
+> path('', views.home, name='blog-home')
+
+> path('about/', views.about, name='blog-about')

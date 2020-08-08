@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% if title %}
-    <title>Django Blog - {{title}}</title>
-    {%else%}
-    <title>Django Blog</title>
-    {%endif%}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <h1>Blog About!!!</h1>
-  </body>
-</html>
+<!-- basically using the common template from base.html  -->
+
+{% extends "blog/base.html"%} {% block content%}
+<h1>Blog About!!!</h1>
+{% endblock content%}
