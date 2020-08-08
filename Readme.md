@@ -1,3 +1,6 @@
+![GitHub repo size](https://img.shields.io/github/repo-size/A1dricAP/Social)
+[![GitHub issues](https://img.shields.io/github/issues/A1dricAP/Social)](https://github.com/A1dricAP/Social/issues)
+
 # Social App
 
 ## Django framework and React
