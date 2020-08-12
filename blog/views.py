@@ -16,6 +16,9 @@ posts = [{
 }
 ]
 
+# basically this is the middleware to be
+# passed while declaring the route.
+
 
 def home(request):
     context = {
