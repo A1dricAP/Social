@@ -1,28 +1,17 @@
 # this file to define what has to be sent to the user.
 
 from django.shortcuts import render
+from .models import Post
 
-posts = [{
-    'name': 'Aldric Pereira',
-    'title': 'Don\'t really know',
-    'content': 'First post',
-    'date_posted': 'August 08, 2020'
-},
-    {
-    'name': 'Aaron',
-    'title': 'i really know',
-    'content': 'second post',
-    'date_posted': 'August 18, 2020'
-}
-]
 
+# --------------------------------------------------------------------------------------------
 # basically this is the middleware to be
 # passed while declaring the route.
 
 
 def home(request):
     context = {
-        'posts': posts
+        'posts': Post.objects.all()
     }
     return render(request, 'blog/home.html', context)
 
