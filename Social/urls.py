@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 # importing include function, to include url file from blog directory.
 from django.urls import path, include
+from users import views as user_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     # this route will map us to the url file in the blog directory and give us the content set in that route
+    path('register/', user_views.register, name="register"),
     path('', include('blog.urls')),
 
 

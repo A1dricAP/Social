@@ -9,6 +9,8 @@
 
 # Social App
 
+if the website doesn't seem to work, restart the server.
+
 ## Django framework and React
 
 This app is a social media categorised one. The main purpose is to learn Django framework.
@@ -134,6 +136,12 @@ Why are migrations useful?
 -> Migrations are useful because it allows us to make changes to the database even after the database has been created, containing data.
 
 Inorder for the posts to be visible on our admin page, we need to import Post model in admin.py.
+
+we can render the form shown in paragraphs using the "as_p" method.
+
+Django has a preloaded user signup form that we can use, by importing it into our project. Using the following:
+-> "from django.contrib.auth.forms import UserCreationForm" in the views file.
+
 
 ```
 
