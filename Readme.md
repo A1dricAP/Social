@@ -142,6 +142,20 @@ we can render the form shown in paragraphs using the "as_p" method.
 Django has a preloaded user signup form that we can use, by importing it into our project. Using the following:
 -> "from django.contrib.auth.forms import UserCreationForm" in the views file.
 
+route created will throw an error, if there's no template in existence. The django app will look for the template in a default location -> Exception Value
+this value is shown on the main routed page
+
+we can make changes in th settings of our main app -> setting.py file, to work with our app.
+for instance, after logging in the users, we can redirect them to the homepage of the blog, by setting this in the settings.py file
+-> LOGIN_REDIRECT_URL = 'blog-home'
+
+To prevent the user from accessing the profile page, without being logged in; we need to add the (login_required) decorator provided to us Django.
+- First we need to import the decorator in our views file, to use it as a middleware.
+-> from django.contrib.auth.decorators import login_required.
+- And then, declare it above the profile function
+-> @login_required
+
+A decorator basically adds functionality to an existing function.
 
 ```
 

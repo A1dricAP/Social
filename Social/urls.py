@@ -13,8 +13,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# **************************************************************************************************************************
+
+
 from django.contrib import admin
 # importing include function, to include url file from blog directory.
+from django.contrib.auth import views as auth_views
 from django.urls import path, include
 from users import views as user_views
 
@@ -22,7 +26,13 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # this route will map us to the url file in the blog directory and give us the content set in that route
     path('register/', user_views.register, name="register"),
+    path('profile/', user_views.profile, name="profile"),
+    # * telling Django to look for the template defined in the as_view() method.
+    path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name="login"),
+    path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name="logout"),
     path('', include('blog.urls')),
+
+
 
 
 
