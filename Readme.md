@@ -157,6 +157,14 @@ To prevent the user from accessing the profile page, without being logged in; we
 
 A decorator basically adds functionality to an existing function.
 
+Pillow is a library for working with images in python.
+
+After creating a model, we need to register it in the admin.py file.
+
+To create a profile, first we need to create a model and import the django defaulr user. Then we need to register the the model in the admin.py file. Last, we need to makemigrations and then migrate. So that it runs with the database.
+After these steps, once we upload an image on our website, we'll be able to see another folder in our project main folder as profile_pics -> the name we set as the directory to save the pics uploaded online. `upload_to = "profile_pics"`
+
+the above mentioned practice is not ideal enough of saving images in the profile_pics directory which is open. so we create two new settings, MEDIA_ROOT - where we define the root path for saving the images --> "base_directory/media/profile_pics/<name_of_pic>"
 ```
 
 ---

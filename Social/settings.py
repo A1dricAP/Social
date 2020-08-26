@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -121,6 +122,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# * this is just saying that Media Root will be at the projects base directory,
+# * and have another directory named 'media'
+# * so basically, the path will look like "base_directory/media/profile_pics/<name_of_pic>"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# * this setting is to use the media directory created in the MEDIA ROOT
+MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
