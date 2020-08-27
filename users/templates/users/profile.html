@@ -9,5 +9,18 @@
       <p class="text-secondary">{{user.email}}</p>
     </div>
   </div>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset class="form-group">
+        <legend class="border-bottom mb-4">Profile Info</legend>
+        <!-- using "as_p" to render the form in paragraphs. -->
+        <!-- declaring we want to use the crispy form; using " | " as a filter. -->
+        {{u_form|crispy}}   
+        {{p_form|crispy}}   
+    </fieldset>
+    <div class="form-group">
+        <button class="btn btn-outline-info" type="submit">Update!</button>
+    </div>
+</form method="POST">
 </div>
 {% endblock content%}
