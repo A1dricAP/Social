@@ -9,7 +9,7 @@ from django.contrib.auth.models import User
 from django.dispatch import receiver
 
 # * importing profiles from our models, since we'll be using profiles in our fucntion.
-# ? the reason we're importing is because we want to create a profile for each new user.
+#  the reason we're importing is because we want to create a profile for each new user.
 from .models import Profile
 
 # the function explains that, when a receiver signal is received, with the post_save from the User;

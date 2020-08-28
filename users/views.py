@@ -30,8 +30,8 @@ def profile(request):
         p_form = ProfileUpdateForm(
             request.POST, request.FILES, instance=request.user.profile)
         if u_form.is_valid() and p_form.is_valid():
-            u_form.save()
-            p_form.save()
+            u_form.save(force_insert=False)
+            p_form.save(force_insert=False)
             messages.success(
                 request, f'Your account has been updated, mate!')
             # * redirecting to the blog homepage, using the name given for the url pattern of blog homepage.

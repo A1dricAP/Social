@@ -134,7 +134,7 @@ MEDIA_URL = '/media/'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # ? setting the default route after logging to -> blog homrpage.
-LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_REDIRECT_URL = 'blog-about'
 # * It works!!
 
 # ? setting the default route for the profile page when no user is logged in to the "login page"
