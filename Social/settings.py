@@ -140,3 +140,4 @@ LOGIN_REDIRECT_URL = 'blog-home'
 # ? setting the default route for the profile page when no user is logged in to the "login page"
 LOGIN_URL = 'login'
 # *it works!!
+# ALLOWED_HOSTS = ['de6dadd3afd1.ngrok.io']
