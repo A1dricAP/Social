@@ -1,7 +1,8 @@
 # this file to define what has to be sent to the user.
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
+from django.contrib.auth.models import User
 # this is a class based view.
 from django.views.generic import (
     ListView,
@@ -33,6 +34,16 @@ class PostListView(ListView):
     context_object_name = 'posts'
     # this is to view our posts from newer -> older
     ordering = ['-date_posted']
+
+
+class UserPostListView(ListView):
+    model = Post
+    template_name = 'blog/user_posts.html'
+    context_object_name = 'posts'
+
+    def get_queryset(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        return Post.objects.filter(author=user).order_by('-date_posted')
 
 
 class PostDetailView(DetailView):

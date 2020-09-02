@@ -2,6 +2,7 @@
 
 {%extends "blog/base.html"%} {%block content%}
 <!-- so this is how code is written in html; with the help of   -->
+<h1 class="mb-3">Posts by {{view.kwargs.username}}</h1>
 {% for post in posts %}
 <!-- iterating through each post dictionary created in `views.py`-->
 <article class="media content-section">
@@ -11,7 +12,7 @@
   />
   <div class="media-body">
     <div class="article-metadata">
-      <a class="mr-2" href="{% url 'user-posts' post.author.username%}"
+      <a class="mr-2" href="{% url 'user-posts' post.author.username %}"
         >{{ post.author }}</a
       >
       <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
