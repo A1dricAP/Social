@@ -141,3 +141,10 @@ LOGIN_REDIRECT_URL = 'blog-about'
 LOGIN_URL = 'login'
 # *it works!!
 # ALLOWED_HOSTS = ['de6dadd3afd1.ngrok.io']
+
+# EMAIL_BACKEND='django.core.mail.backends.smtp.Emailbackend'
+# EMAIL_HOST = 'smpt.gmail.com'
+# EMAIL_POST=587
+# EMAIL_USE_TLS=True
+# EMAIL_HOST_USER=
+# EMAIL_HOST_PASSWORD=
