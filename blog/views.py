@@ -35,6 +35,8 @@ class PostListView(ListView):
     # this is to view our posts from newer -> older
     ordering = ['-date_posted']
 
+# ? this is middleware is created to basically show individual's posts on a single page.
+
 
 class UserPostListView(ListView):
     model = Post
