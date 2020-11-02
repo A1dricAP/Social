@@ -1,8 +1,4 @@
-![GitHub language count](https://img.shields.io/github/languages/count/A1dricAP/Social?color=green)
-![GitHub top language](https://img.shields.io/github/languages/top/A1dricAP/Social)
 
-![GitHub repo size](https://img.shields.io/github/repo-size/A1dricAP/Social)
-[![GitHub issues](https://img.shields.io/github/issues/A1dricAP/Social)](https://github.com/A1dricAP/Social/issues)
 <img src="https://img.shields.io/badge/django-v3.1.0-yellow"/>
 
 # Social App
